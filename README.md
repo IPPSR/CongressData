@@ -53,7 +53,7 @@ short/long descriptions from the codebook, and citations for non-exact
 matches of a supplied term. For example, searching ‘tax’ will return
 variables with words like ‘taxes’ and ‘taxable’ in any of those columns.
 
-### Access Citations
+### Pulling Citations
 
 Each variable in `Congress Data` was collected from external sources.
 We’ve made it easy to cite the source of each variable you use with the
