@@ -120,9 +120,9 @@ get_aggregate_cong_data <- function(states     = NULL,
                        .vars_predicate = dplyr::any_vars(stringr::str_detect(., rels))) %>%
       pull(variable)
     dropper <- function(x){
-      x <- gsub("_sum","",x)
-      x <- gsub("_first","",x)
-      x <- gsub("_mean","",x)
+      x <- gsub("_sum$","",x)
+      x <- gsub("_first$","",x)
+      x <- gsub("_mean$","",x)
     }
     data <- data[dropper(colnames(data)) %in% c(related,panel_vars)]
   }
