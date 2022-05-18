@@ -15,15 +15,15 @@
 #' a single session (e.g. 50) or a two sessions that represent the first and last
 #' that you want in the outputted dataframe (such as `c(1, 20)`).
 #' @param census_nonperc_vars Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-#' One of "Mean", "Sum", or "First Year Value". Requires a string.
+#' One of "Mean", "Sum", or "First". Requires a string.
 #' @param census_perc_vars Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-#' One of "Mean", "Sum", or "First Year Value". Requires a string.
+#' One of "Mean", "Sum", or "First". Requires a string.
 #' @param bill_vars Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-#' One of "Mean", "Sum", or "First Year Value". Requires a string.
+#' One of "Mean", "Sum", or "First". Requires a string.
 #' @param com_vars Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-#' One of "Mean", "Sum", or "First Year Value". Requires a string.
+#' One of "Mean", "Sum", or "First". Requires a string.
 #' @param else_vars Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-#' One of "Mean", "Sum", or "First Year Value". Requires a string.
+#' One of "Mean", "Sum", or "First". Requires a string.
 #'
 #' @importFrom dplyr "%>%" filter arrange left_join bind_rows group_by
 #'   if_else mutate distinct rename n
@@ -42,6 +42,19 @@ get_aggregate_cong_data <- function(states     = NULL,
                                     com_vars = "Mean",
                                     else_vars = "Mean"){
 
+  check_agg_input <- function(vec){
+    if(!vec %in% c("Mean","Sum","First")){
+      stop("Please choose 'Mean' or 'Sum' or 'First' for the variable aggregations")
+    }
+  }
+
+  lapply(c(census_nonperc_vars,
+           census_perc_vars,
+           bill_vars,
+           com_vars,
+           else_vars),
+         check_agg_input)
+
   codebook <- congressData::codebook
 
   panel_vars <- c("state","st","firstname","lastname","bioguide","year","start","end",
@@ -57,7 +70,7 @@ get_aggregate_cong_data <- function(states     = NULL,
   if(census_nonperc_vars == "Sum"){
     cenes_np_dat <- congressData::sum_census_np
   }
-  if(census_nonperc_vars == "First Year Value"){
+  if(census_nonperc_vars == "First"){
     cenes_np_dat <- congressData::first_census_np
   }
 
@@ -68,7 +81,7 @@ get_aggregate_cong_data <- function(states     = NULL,
   if(census_perc_vars == "Sum"){
     cenes_p_dat <- congressData::sum_census_p
   }
-  if(census_perc_vars == "First Year Value"){
+  if(census_perc_vars == "First"){
     cenes_p_dat <- congressData::first_census_p
   }
 
@@ -79,7 +92,7 @@ get_aggregate_cong_data <- function(states     = NULL,
   if(bill_vars == "Sum"){
     bills_dat <- congressData::sum_bills
   }
-  if(bill_vars == "First Year Value"){
+  if(bill_vars == "First"){
     bills_dat <- congressData::first_bills
   }
 
@@ -90,7 +103,7 @@ get_aggregate_cong_data <- function(states     = NULL,
   if(com_vars == "Sum"){
     com_dat <- congressData::sum_com
   }
-  if(com_vars == "First Year Value"){
+  if(com_vars == "First"){
     com_dat <- congressData::first_com
   }
 
@@ -101,7 +114,7 @@ get_aggregate_cong_data <- function(states     = NULL,
   if(else_vars == "Sum"){
     else_dat <- congressData::sum_else
   }
-  if(else_vars == "First Year Value"){
+  if(else_vars == "First"){
     else_dat <- congressData::first_else
   }
 
