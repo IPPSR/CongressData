@@ -119,10 +119,10 @@ get_aggregate_cong_data <- function(states     = NULL,
   }
 
   #---- MERGE THE CUSTOM DAT --------#
-  data <- left_join(com_dat, cenes_p_dat) %>%
-    left_join(., cenes_np_dat) %>%
-    left_join(., bills_dat) %>%
-    left_join(., else_dat)
+  data <- suppressMessages(left_join(com_dat, cenes_p_dat)) %>%
+    suppressMessages(left_join(., cenes_np_dat)) %>%
+    suppressMessages(left_join(., bills_dat)) %>%
+    suppressMessages(left_join(., else_dat))
 
   #---- related -------#
   if(!is.null(related_to)){
@@ -149,12 +149,12 @@ get_aggregate_cong_data <- function(states     = NULL,
   #---- congresses ----#
   if(!is.null(sessions)){
     if(length(sessions) == 2){
-      congress <- congress %>%
+      data <- data %>%
         dplyr::filter(congress_number >= sessions[1],
                       congress_number <= sessions[2])
     }
     if(length(sessions) == 1){
-      congress <- congress %>%
+      data <- data %>%
         dplyr::filter(congress_number == sessions)
     }
   }

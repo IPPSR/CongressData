@@ -15,7 +15,7 @@
 #' a single year (e.g. 2001) or a two year that represent the first and last
 #' that you want in the outputted dataframe (such as `c(1989, 20001)`).
 #'
-#' @importFrom dplyr "%>%" filter arrange left_join bind_rows group_by
+#' @importFrom dplyr "%>%" filter arrange bind_rows group_by
 #'   if_else mutate distinct rename n
 #' @importFrom tidyselect all_of any_of
 #'
