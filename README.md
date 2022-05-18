@@ -12,6 +12,9 @@ text and BibTeX for every variable. An associated web application is
 available [here](https://congress.ippsr.msu.edu/congress/) and the
 data-only package is [here](https://github.com/IPPSR/congressData).
 
+The package’s manual is available here: [congress
+manual](congressData_1.0_manual.pdf)
+
 ## Installing this Package and the Data-only Companion Package
 
 `congress` is a functional package that interacts with Congress Data. We
@@ -34,8 +37,8 @@ devtools::install_github("ippsr/congressData")
 
 ## Finding Variables
 
-`get_var_info`: Use `get_var_info` to retrieve information regarding
-variables in Congress Data and identify variables of interest. The
+`get_var_info`: Retrieve information regarding variables in Congress
+Data and identify variables of interest with `get_var_info`. The
 function allows you to search to codebook to find the years each
 variable is observed in the data; a short and long description of each
 variable; and the source and citation/s for each variable. Citations are
@@ -45,28 +48,29 @@ partial-match variable names with `var_names`.
 
 ## Accessing Data
 
-`get_congress_data`: Use `get_congress_data` to access all or part of
-Congress Data. Subset by state names with `state` and years with `years`
-(either a single year or a two-year vector that represents the min/max
-of what you want). You can also use the `related_to` argument to search
-across variable names, short/long descriptions from the codebook, and
-citations for non-exact matches of a supplied term. For example,
+`get_congress_data`: Access all or a part of Congress Data with
+`get_congress_data`. Subset by state names with `state` and years with
+`years` (either a single year or a two-year vector that represents the
+min/max of what you want). You can also use the `related_to` argument to
+search across variable names, short/long descriptions from the codebook,
+and citations for non-exact matches of a supplied term. For example,
 searching ‘tax’ will return variables with words like ‘taxes’ and
 ‘taxable’ in any of those columns.
 
 ## Pulling Citations
 
 `get_var_info`: Each variable in Congress Data was collected from
-external sources. We’ve made it easy to cite the source of each variable
-you use with the `get_var_info` function described above. Supply a
-vector of variable names to the function with the `var_names` function
-and collect the citations provided in the plain text or BibTeX columns.
+external sources, please use `get_var_info` to obtain their citations.
+We’ve made it easy to cite the source of each variable you use with the
+`get_var_info` function described above. Supply a vector of variable
+names to the function with the `var_names` function and collect the
+citations provided in the plain text or BibTeX columns.
+
+# Citation
 
 In addition to citing each variable’s source, we ask that you cite
 Congress Data if use it or this package. A recommended citation is
 below.
-
-# Citation
 
 > Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022). The
 > Congress Data. East Lansing, MI: Institute for Public Policy and
