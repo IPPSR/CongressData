@@ -19,3 +19,4 @@ Imports:
     tidyselect,
     congressData
 Remotes: caleblucas/congressData
+VignetteBuilder: knitr
