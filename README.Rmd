@@ -137,7 +137,7 @@ get_var_info(var_names = "percent_bus") %>%
 
 ```
 
-# Citation
+## Citation
 
 In addition to citing each variable's source, we ask that you cite Congress Data if use this package or the dataset. A recommended citation is below.
 
