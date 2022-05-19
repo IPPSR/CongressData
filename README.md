@@ -6,12 +6,15 @@
 `congress` is a package designed to allow a user with only basic
 knowledge of R interact with **CongressData**, a dataset with nearly 800
 variables that compiles information about all US congressional districts
-across 1789-2021. Users can find variables related to demographics,
-politics, and policy; subset the data across multiple dimensions; create
-custom aggregations of the dataset; and access citations in both plain
-text and BibTeX for every variable. An associated web application is
-available [here](https://congress.ippsr.msu.edu/congress/) and the
-data-only package is [here](https://github.com/IPPSR/congressData).
+across 1789-2021. Specifically, the dataset tracks characteristics of
+congressional districts, the members of congress themselves, and the
+behavior of those members in policymaking. Users can find variables
+related to demographics, politics, and policy; subset the data across
+multiple dimensions; create custom aggregations of the dataset; and
+access citations in both plain text and BibTeX for every variable. An
+associated web application is available
+[here](https://congress.ippsr.msu.edu/congress/) and the data-only
+package is [here](https://github.com/IPPSR/congressData).
 
 ## Read the Codebook and Manual
 

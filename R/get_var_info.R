@@ -1,12 +1,12 @@
-#' Get information regarding the Congress Data variables
+#' Get information regarding CongressData variables
 #'
-#' \code{get_var_info} retrieves information regarding variables in the Congress Data dataset.
+#' \code{get_var_info} retrieves information regarding variables in the CongressData dataset.
 #' The information available includes: the years each variable is observed in the data;
 #' a short and long description of each variable; and the source and citation/s for each
 #' variable. Citations are available in both bibtex and plain text.
 #'
 #' Specifying no arguments returns all the information for all the variables
-#' in the Congress Data dataset.
+#' in the CongressData dataset.
 #'
 #' @name get_var_info
 #'

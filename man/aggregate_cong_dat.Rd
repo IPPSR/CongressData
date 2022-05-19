@@ -2,7 +2,7 @@
 % Please edit documentation in R/aggregate_cong_dat.R
 \name{aggregate_cong_dat}
 \alias{aggregate_cong_dat}
-\title{Load Congress Data into the R environment}
+\title{Load CongressData into the R environment}
 \usage{
 aggregate_cong_dat(
   states = NULL,
@@ -45,5 +45,5 @@ One of "Mean", "Sum", or "First". Requires a string.}
 }
 \description{
 \code{aggregate_cong_dat} loads either a full or subsetted version of the full
-Congress Data dataset into the R environment as a dataframe.
+CongressData dataset into the R environment as a dataframe.
 }

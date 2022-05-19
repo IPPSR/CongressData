@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_cong_data.R
 \name{get_cong_data}
 \alias{get_cong_data}
-\title{Load Congress Data into the R environment}
+\title{Load CongressData into the R environment}
 \usage{
 get_cong_data(states = NULL, related_to = "", years = NULL)
 }
@@ -21,5 +21,5 @@ that you want in the outputted dataframe (such as \code{c(1989, 20001)}).}
 }
 \description{
 \code{get_cong_data} loads either a full or subsetted version of the full
-Congress Data dataset into the R environment as a dataframe.
+CongressData dataset into the R environment as a dataframe.
 }

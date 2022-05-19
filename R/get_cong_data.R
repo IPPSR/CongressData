@@ -1,7 +1,7 @@
-#' Load Congress Data into the R environment
+#' Load CongressData into the R environment
 #'
 #' \code{get_cong_data} loads either a full or subsetted version of the full
-#' Congress Data dataset into the R environment as a dataframe.
+#' CongressData dataset into the R environment as a dataframe.
 #'
 #'@name get_cong_data
 #'

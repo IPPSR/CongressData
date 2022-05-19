@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_var_info.R
 \name{get_var_info}
 \alias{get_var_info}
-\title{Get information regarding the Congress Data variables}
+\title{Get information regarding CongressData variables}
 \usage{
 get_var_info(var_names = NULL, related_to = NULL)
 }
@@ -17,14 +17,14 @@ a character string, the function searches the other relevant fields (variable na
 description, and source) for string matches. Not case sensitive.}
 }
 \description{
-\code{get_var_info} retrieves information regarding variables in the Congress Data dataset.
+\code{get_var_info} retrieves information regarding variables in the CongressData dataset.
 The information available includes: the years each variable is observed in the data;
 a short and long description of each variable; and the source and citation/s for each
 variable. Citations are available in both bibtex and plain text.
 }
 \details{
 Specifying no arguments returns all the information for all the variables
-in the Congress Data dataset.
+in the CongressData dataset.
 }
 \examples{
 
