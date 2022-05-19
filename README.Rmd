@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 # congress: A Tool for the Congress Data <img src="figures/congress.png" height="150" align="right"/>
 
-**congress** is a package designed to allow a user with only basic knowledge of R interact with *Congress Data*, a dataset that compiles information about all US congressional districts across 1789-2021. Users can find variables related to demographics, politics, and policy; subset the data across multiple dimensions; create custom aggregations of the dataset; and access citations in both plain text and BibTeX for every variable. An associated web application is available [here](https://congress.ippsr.msu.edu/congress/) and the data-only package is [here](https://github.com/IPPSR/congressData).
+`congress` is a package designed to allow a user with only basic knowledge of R interact with **Congress Data**, a dataset with nearly 800 variables that compiles information about all US congressional districts across 1789-2021. Users can find variables related to demographics, politics, and policy; subset the data across multiple dimensions; create custom aggregations of the dataset; and access citations in both plain text and BibTeX for every variable. An associated web application is available [here](https://congress.ippsr.msu.edu/congress/) and the data-only package is [here](https://github.com/IPPSR/congressData).
 
 ## Read the Manual
 
