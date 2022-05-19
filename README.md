@@ -115,8 +115,9 @@ cong_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
 
 `aggregate_cong_dat`: Choose how to aggregate the member-year data into
 member-session data across subsets (e.g. data sources) of Congress Data.
-You can choose either `Mean` or `Sum` or `First` (meaning first year in
-the session value) to aggregat the following chunks of the dataset:
+You can choose either `Mean` or `Sum` or `First` (meaning the value in
+the first year of the sessions) to aggregat the following chunks of the
+dataset:
 
 -   census_nonperc_vars: Non percent Census Variables
 -   census_perc_vars Percent Census Variables
