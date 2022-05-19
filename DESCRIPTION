@@ -17,4 +17,4 @@ Imports:
     rlang,
     tidyselect,
     congressData
-Remotes: caleblucas/congressData
+Remotes: ippsr/congressData

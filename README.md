@@ -24,6 +24,8 @@ its arguments. It is available here:
 <a href="https://raw.githubusercontent.com/IPPSR/congress/main/congress_1.0_manual.pdf" target="_blank">congress
 manual</a>.
 
+[link](https://raw.githubusercontent.com/IPPSR/congress/main/congress_1.0_manual.pdf){:target=“\_blank”}
+
 ## Installing this Package and the Data-only Companion Package
 
 `congress` is a functional package that interacts with Congress Data. We
