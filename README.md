@@ -1,22 +1,21 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# congress: A Tool for the Congress Data <img src="figures/congress.png" height="150" align="right"/>
+# congress: A Tool for CongressData <img src="figures/congress.png" height="150" align="right"/>
 
 `congress` is a package designed to allow a user with only basic
-knowledge of R interact with **Congress Data**, a dataset with nearly
-800 variables that compiles information about all US congressional
-districts across 1789-2021. Users can find variables related to
-demographics, politics, and policy; subset the data across multiple
-dimensions; create custom aggregations of the dataset; and access
-citations in both plain text and BibTeX for every variable. An
-associated web application is available
-[here](https://congress.ippsr.msu.edu/congress/) and the data-only
-package is [here](https://github.com/IPPSR/congressData).
+knowledge of R interact with **CongressData**, a dataset with nearly 800
+variables that compiles information about all US congressional districts
+across 1789-2021. Users can find variables related to demographics,
+politics, and policy; subset the data across multiple dimensions; create
+custom aggregations of the dataset; and access citations in both plain
+text and BibTeX for every variable. An associated web application is
+available [here](https://congress.ippsr.msu.edu/congress/) and the
+data-only package is [here](https://github.com/IPPSR/congressData).
 
 ## Read the Codebook and Manual
 
-The Congress Data codebook is available
+The CongressData codebook is available
 <a href="https://raw.githubusercontent.com/IPPSR/congressData/main/congress_codebook_1.pdf" target="_blank">here</a>.
 
 The package’s manual contains information regarding each function and
@@ -24,11 +23,9 @@ its arguments. It is available here:
 <a href="https://raw.githubusercontent.com/IPPSR/congress/main/congress_1.0_manual.pdf" target="_blank">congress
 manual</a>.
 
-[link](https://raw.githubusercontent.com/IPPSR/congress/main/congress_1.0_manual.pdf){:target=“\_blank”}
-
 ## Installing this Package and the Data-only Companion Package
 
-`congress` is a functional package that interacts with Congress Data. We
+`congress` is a functional package that interacts with CongressData. We
 maintain the dataset in another package called `congressData`. You can
 use the data-only package if you simply want to access the data. Install
 them from GitHub like so:
@@ -46,14 +43,14 @@ install_github("ippsr/congressData")
 
 ## Finding Variables
 
-`get_var_info`: Retrieve information regarding variables in Congress
-Data and identify variables of interest with `get_var_info`. The
-function allows you to search to codebook to find the years each
-variable is observed in the data; a short and long description of each
-variable; and the source and citation/s for each variable. Citations are
-available in both bibtex and plain text. Use the function to search for
-broad terms like ‘tax’ with the `related_to` argument and/or
-partial-match variable names with `var_names`.
+`get_var_info`: Retrieve information regarding variables in CongressData
+and identify variables of interest with `get_var_info`. The function
+allows you to search to codebook to find the years each variable is
+observed in the data; a short and long description of each variable; and
+the source and citation/s for each variable. Citations are available in
+both bibtex and plain text. Use the function to search for broad terms
+like ‘tax’ with the `related_to` argument and/or partial-match variable
+names with `var_names`.
 
 ``` r
 suppressMessages(library(dplyr))
@@ -67,8 +64,8 @@ library(congress)
 # variables related to health insurance
 h_ins_cong <- get_var_info(related_to = "health insurance")
 
-cat("There are",nrow(h_ins_cong),"variables related to health insurance in Congress Data")
-#> There are 41 variables related to health insurance in Congress Data
+cat("There are",nrow(h_ins_cong),"variables related to health insurance in CongressData")
+#> There are 41 variables related to health insurance in CongressData
 
 head(h_ins_cong$variable)
 #> [1] "percent_under18_healthins" "percent_private_under18"  
@@ -85,7 +82,7 @@ head(under18_cong$variable)
 ```
 
 `get_var_info` returns the following information to simplify using
-Congress Data:
+CongressData:
 
 -   variable: Variable name
 -   year: The precise years the variable is observed
@@ -98,7 +95,7 @@ Congress Data:
 
 ## Accessing Member-Year Data
 
-`get_cong_data`: Access all or a part of Congress Data with
+`get_cong_data`: Access all or a part of CongressData with
 `get_cong_data`. Subset by state names with `state` and years with
 `years` (either a single year or a two-year vector that represents the
 min/max of what you want). You can also use the `related_to` argument to
@@ -121,7 +118,7 @@ cong_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
 ## Aggregate to Member-Session Data with Custom Schemes
 
 `aggregate_cong_dat`: Choose how to aggregate the member-year data into
-member-session data across subsets (e.g. data sources) of Congress Data.
+member-session data across subsets (e.g. data sources) of CongressData.
 You can choose either `Mean` or `Sum` or `First` (meaning the value in
 the first year of the session) to aggregate the following chunks of the
 dataset:
@@ -158,7 +155,7 @@ cong_subset <- aggregate_cong_dat(states = c("Kentucky","Michigan","Pennsylvania
 
 ## Pulling Citations
 
-`get_var_info`: Each variable in Congress Data was collected from
+`get_var_info`: Each variable in CongressData was collected from
 external sources, please use `get_var_info` to obtain their citations
 (plain text and BibTeX). We’ve made it easy to cite the source of each
 variable you use with the `get_var_info` function described above.
@@ -182,9 +179,9 @@ get_var_info(var_names = "percent_bus") %>%
 ## Citation
 
 In addition to citing each variable’s source, we ask that you cite
-Congress Data if use this package or the dataset. A recommended citation
+CongressData if use this package or the dataset. A recommended citation
 is below.
 
-> Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022). The
-> Congress Data. East Lansing, MI: Institute for Public Policy and
-> Social Research (IPPSR)
+> Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022).
+> CongressData. East Lansing, MI: Institute for Public Policy and Social
+> Research (IPPSR)
