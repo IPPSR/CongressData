@@ -14,11 +14,15 @@ associated web application is available
 [here](https://congress.ippsr.msu.edu/congress/) and the data-only
 package is [here](https://github.com/IPPSR/congressData).
 
-## Read the Manual
+## Read the Codebook and Manual
+
+The Congress Data codebook is available
+<a href="https://raw.githubusercontent.com/IPPSR/congressData/main/congress_codebook_1.pdf" target="_blank">here</a>.
 
 The package’s manual contains information regarding each function and
-its arguments. It is available here: [congress
-manual](congress_1.0_manual.pdf)
+its arguments. It is available here:
+<a href="https://raw.githubusercontent.com/IPPSR/congress/main/congress_1.0_manual.pdf" target="_blank">congress
+manual</a>.
 
 ## Installing this Package and the Data-only Companion Package
 
