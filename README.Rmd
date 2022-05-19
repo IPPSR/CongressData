@@ -23,9 +23,7 @@ The package's manual contains information regarding each function and its argume
 
 ## Installing this Package and the Data-only Companion Package
 
-`congress` is a functional package that interacts with Congress Data. We maintain the dataset in another package called `congressData`. You can use the data-only package if you simply want to access the data.
-
-We do not plan on moving these packages to CRAN in the immediate future, so install them from GitHub like so:
+`congress` is a functional package that interacts with Congress Data. We maintain the dataset in another package called `congressData`. You can use the data-only package if you simply want to access the data. Install them from GitHub like so:
 
 ```{r eval=F}
 
@@ -33,7 +31,7 @@ We do not plan on moving these packages to CRAN in the immediate future, so inst
 library(devtools)
 
 # this will download congressData as well (NOTE: installation can take several minutes)
-install_github("caleblucas/congress")
+install_github("ippsr/congress")
 
 # if there are issues or you only want to download congressData (NOTE: installation can take several minutes)
 install_github("ippsr/congressData")

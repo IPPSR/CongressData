@@ -33,7 +33,7 @@ so install them from GitHub like so:
 library(devtools)
 
 # this will download congressData as well (NOTE: installation can take several minutes)
-install_github("caleblucas/congress")
+install_github("ippsr/congress")
 
 # if there are issues or you only want to download congressData (NOTE: installation can take several minutes)
 install_github("ippsr/congressData")

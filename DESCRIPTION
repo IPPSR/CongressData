@@ -1,9 +1,7 @@
 Package: congress
 Title: A Tool for the Congress Data
 Version: 1.0
-Authors@R: 
-    person("Caleb", "Lucas", , "clucas@msu.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-0049-4680"))
+Author: Caleb Lucas (https://caleblucas.com/)
 Description: A tool that imports, subsets, and exports the Congress Data dataset assembled by Matt Grossmann, Caleb Lucas, Josh McCrain, and Ian Ostrander. The Congress Data contains approximately 800 variables concerning all US congressional districts and covers 1789-2021. Users with only a basic understanding of R can subset this data across multiple dimensions, export their search results, create custom aggregations of the dataset, identify the citations associated with their searches, and more.
 License: GPL (>= 3)
 Encoding: UTF-8
