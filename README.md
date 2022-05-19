@@ -59,7 +59,7 @@ names with `var_names`.
 suppressMessages(library(dplyr))
 library(congress)
 #> Please cite:
-#> Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022). The Congress Data.
+#> Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022). CongressData.
 #> East Lansing, MI: Institute for Public Policy and Social Research (IPPSR).
 #> 
 #> You are using the version of the Congress Data stored in your local copy of congressData. Running `congressData::get_congress_version()` will print your local version number.
