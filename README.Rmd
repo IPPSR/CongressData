@@ -82,10 +82,10 @@ head(under18_cong$variable)
 all_the_dat <- get_cong_data()
 
 # subset by state, topic, and years
-agg_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
-                            ,related_to = "tax"
-                            ,years = c(1960,1980)
-                            )
+cong_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
+                             ,related_to = "tax"
+                             ,years = c(1960,1980)
+                             )
 
 ```
 
@@ -129,6 +129,10 @@ cong_subset <- aggregate_cong_dat(states = c("Kentucky","Michigan","Pennsylvania
 
 # bibtex is also available
 get_var_info(var_names = "com_benghazi_299") %>%
+  pull(plaintext_cite)
+
+# bibtex is also available
+get_var_info(var_names = "percent_bus") %>%
   pull(plaintext_cite)
 
 ```

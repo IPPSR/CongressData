@@ -23,10 +23,8 @@ manual](congress_1.0_manual.pdf)
 
 `congress` is a functional package that interacts with Congress Data. We
 maintain the dataset in another package called `congressData`. You can
-use the data-only package if you simply want to access the data.
-
-We do not plan on moving these packages to CRAN in the immediate future,
-so install them from GitHub like so:
+use the data-only package if you simply want to access the data. Install
+them from GitHub like so:
 
 ``` r
 # use the devtools library to download the package from GitHub
@@ -107,10 +105,10 @@ searching ‘tax’ will return variables with words like ‘taxes’ and
 all_the_dat <- get_cong_data()
 
 # subset by state, topic, and years
-agg_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
-                            ,related_to = "tax"
-                            ,years = c(1960,1980)
-                            )
+cong_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
+                             ,related_to = "tax"
+                             ,years = c(1960,1980)
+                             )
 ```
 
 ## Aggregate to Member-Session Data with Custom Schemes
