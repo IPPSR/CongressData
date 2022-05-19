@@ -33,7 +33,7 @@ We do not plan on moving these packages to CRAN in the immediate future, so inst
 library(devtools)
 
 # this will download congressData as well (NOTE: installation can take several minutes)
-install_github("ippsr/congress")
+install_github("caleblucas/congress")
 
 # if there are issues or you only want to download congressData (NOTE: installation can take several minutes)
 install_github("ippsr/congressData")
@@ -105,22 +105,20 @@ The variable names in the resulting dataset will reflect how they were aggregate
 
 ```{r}
 
-congress::aggregate_cong_dat()
-
-# access the data using the default mean values
+# import the data using the default mean values
 agg_cong <- aggregate_cong_dat()
 
-# choose specific methods by subgroup
+# choose specific aggregation methods by subgroup
 cong_custom <- aggregate_cong_dat(census_nonperc_vars = "Mean"
-                                   ,census_perc_vars = "Sum"
+                                  ,census_perc_vars = "Sum"
                                   ,bill_vars = "First"
                                   ,com_vars = "Mean"
                                   ,else_vars = "Sum")
 
-# default aggs for specifc states/sessions and vars related to tax
+# default aggs for specific states/sessions and vars related to health
 cong_subset <- aggregate_cong_dat(states = c("Kentucky","Michigan","Pennsylvania")
-                                  ,related_to = "tax"
-                                  ,sessions = c(50,51)
+                                  ,related_to = "health"
+                                  ,sessions = c(50:55)
                                   )
 
 ```

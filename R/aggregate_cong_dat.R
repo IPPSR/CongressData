@@ -119,10 +119,10 @@ aggregate_cong_dat <- function(states     = NULL,
   }
 
   #---- MERGE THE CUSTOM DAT --------#
-  data <- suppressMessages(left_join(com_dat, cenes_p_dat)) %>%
-    suppressMessages(left_join(., cenes_np_dat)) %>%
-    suppressMessages(left_join(., bills_dat)) %>%
-    suppressMessages(left_join(., else_dat))
+  data <- suppressMessages(left_join(com_dat, cenes_p_dat) %>%
+    left_join(., cenes_np_dat) %>%
+    left_join(., bills_dat) %>%
+    left_join(., else_dat))
 
   #---- related -------#
   if(!is.null(related_to)){
