@@ -1,9 +1,9 @@
 #' Load Congress Data into the R environment
 #'
-#' \code{get_congress_data} loads either a full or subsetted version of the full
+#' \code{get_cong_data} loads either a full or subsetted version of the full
 #' Congress Data dataset into the R environment as a dataframe.
 #'
-#'@name get_congress_data
+#'@name get_cong_data
 #'
 #' @param states Default is NULL. If left blank, returns all states. Takes a
 #'   string or vector of strings of state names.
@@ -65,7 +65,6 @@ get_cong_data <- function(states = NULL,
         dplyr::filter(year == years)
     }
   }
-
   return(congress)
 }
 
