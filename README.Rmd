@@ -93,7 +93,7 @@ agg_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
 
 ## Aggregate to Member-Session Data with Custom Schemes
 
-`get_aggregate_cong_data`: Choose how to aggregate the member-year data into member-session data across subsets (e.g. data sources) of Congress Data. You can choose either `Mean` or `Sum` or `First` (meaning first year in the session value) to aggregat the following chunks of the dataset:
+`aggregate_cong_dat`: Choose how to aggregate the member-year data into member-session data across subsets (e.g. data sources) of Congress Data. You can choose either `Mean` or `Sum` or `First` (meaning first year in the session value) to aggregat the following chunks of the dataset:
 
 - census_nonperc_vars: Non percent Census Variables
 - census_perc_vars Percent Census Variables
@@ -113,15 +113,15 @@ agg_cong <- aggregate_cong_dat()
 # choose specific methods by subgroup
 cong_custom <- aggregate_cong_dat(census_nonperc_vars = "Mean"
                                    ,census_perc_vars = "Sum"
-                                       ,bill_vars = "First"
-                                       ,com_vars = "Mean"
-                                       ,else_vars = "Sum")
+                                  ,bill_vars = "First"
+                                  ,com_vars = "Mean"
+                                  ,else_vars = "Sum")
 
 # default aggs for specifc states/sessions and vars related to tax
 cong_subset <- aggregate_cong_dat(states = c("Kentucky","Michigan","Pennsylvania")
-                                    ,related_to = "tax"
-                                    ,sessions = c(50,51)
-                                    )
+                                  ,related_to = "tax"
+                                  ,sessions = c(50,51)
+                                  )
 
 ```
 

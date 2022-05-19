@@ -2,10 +2,9 @@
 % Please edit documentation in R/aggregate_cong_dat.R
 \name{aggregate_cong_dat}
 \alias{aggregate_cong_dat}
-\alias{get_aggregate_cong_data}
 \title{Load Congress Data into the R environment}
 \usage{
-get_aggregate_cong_data(
+aggregate_cong_dat(
   states = NULL,
   related_to = NULL,
   sessions = NULL,
@@ -30,19 +29,19 @@ a single session (e.g. 50) or a two sessions that represent the first and last
 that you want in the outputted dataframe (such as \code{c(1, 20)}).}
 
 \item{census_nonperc_vars}{Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-One of "Mean", "Sum", or "First Year Value". Requires a string.}
+One of "Mean", "Sum", or "First". Requires a string.}
 
 \item{census_perc_vars}{Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-One of "Mean", "Sum", or "First Year Value". Requires a string.}
+One of "Mean", "Sum", or "First". Requires a string.}
 
 \item{bill_vars}{Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-One of "Mean", "Sum", or "First Year Value". Requires a string.}
+One of "Mean", "Sum", or "First". Requires a string.}
 
 \item{com_vars}{Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-One of "Mean", "Sum", or "First Year Value". Requires a string.}
+One of "Mean", "Sum", or "First". Requires a string.}
 
 \item{else_vars}{Default is 'Mean'. Method to aggregate from member-years to member-sessions.
-One of "Mean", "Sum", or "First Year Value". Requires a string.}
+One of "Mean", "Sum", or "First". Requires a string.}
 }
 \description{
 \code{aggregate_cong_dat} loads either a full or subsetted version of the full
