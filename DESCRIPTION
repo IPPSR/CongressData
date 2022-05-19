@@ -2,6 +2,7 @@ Package: congress
 Title: A Tool for the Congress Data
 Version: 1.0
 Author: Caleb Lucas (https://caleblucas.com/)
+Maintainer: Caleb Lucas <calebjlucas@gmail.com>
 Description: A tool that imports, subsets, and exports the Congress Data dataset assembled by Matt Grossmann, Caleb Lucas, Josh McCrain, and Ian Ostrander. The Congress Data contains approximately 800 variables concerning all US congressional districts and covers 1789-2021. Users with only a basic understanding of R can subset this data across multiple dimensions, export their search results, create custom aggregations of the dataset, identify the citations associated with their searches, and more.
 License: GPL (>= 3)
 Encoding: UTF-8
@@ -17,4 +18,3 @@ Imports:
     tidyselect,
     congressData
 Remotes: caleblucas/congressData
-VignetteBuilder: knitr

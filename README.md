@@ -81,7 +81,7 @@ head(under18_cong$variable)
 Congress Data:
 
 -   variable: Variable name
--   year: The prescise years the variable is observed
+-   year: The precise years the variable is observed
 -   short_desc: A short description of the variable
 -   long_desc: A long description of the variable
 -   source: The sources of the data
@@ -164,6 +164,11 @@ have them all.
 get_var_info(var_names = "com_benghazi_299") %>%
   pull(plaintext_cite)
 #> [1] "Charles Stewart III and Jonathan Woon. Congressional Committee Assignments, 103rd to 114th Congresses, 1993--2017: House of Representatives, 2017.\n"
+
+# bibtex is also available
+get_var_info(var_names = "percent_bus") %>%
+  pull(plaintext_cite)
+#> [1] "U.S. Census Bureau. (2022). 2009-2019 American Community Survey 1-year Estimates. Retrieved from the Census Bureau Data API."
 ```
 
 # Citation

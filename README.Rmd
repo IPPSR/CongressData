@@ -64,7 +64,7 @@ head(under18_cong$variable)
 `get_var_info` returns the following information to simplify using Congress Data: 
 
 - variable: Variable name
-- year: The prescise years the variable is observed
+- year: The precise years the variable is observed
 - short_desc: A short description of the variable
 - long_desc: A long description of the variable
 - source: The sources of the data
