@@ -84,10 +84,10 @@ head(under18_cong$variable)
 all_the_dat <- get_cong_data()
 
 # subset by state, topic, and years
-get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
-              ,related_to = "tax"
-              ,years = c(1960,1980)
-              )
+agg_subset <- get_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
+                            ,related_to = "tax"
+                            ,years = c(1960,1980)
+                            )
 
 ```
 
@@ -105,38 +105,41 @@ The variable names in the resulting dataset will reflect how they were aggregate
 
 ```{r}
 
+congress::aggregate_cong_dat()
+
 # access the data using the default mean values
-agg_cong <- get_aggregate_cong_data()
+agg_cong <- aggregate_cong_dat()
 
 # choose specific methods by subgroup
-get_aggregate_cong_data(census_nonperc_vars = "Mean"
-                        ,census_perc_vars = "Sum"
-                        ,bill_vars = "First"
-                        ,com_vars = "Mean"
-                        ,else_vars = "Sum")
+cong_custom <- aggregate_cong_dat(census_nonperc_vars = "Mean"
+                                   ,census_perc_vars = "Sum"
+                                       ,bill_vars = "First"
+                                       ,com_vars = "Mean"
+                                       ,else_vars = "Sum")
 
 # default aggs for specifc states/sessions and vars related to tax
-get_aggregate_cong_data(states = c("Kentucky","Michigan","Pennsylvania")
-                        ,related_to = "tax"
-                        ,sessions = c(50,51)
-                        )
+cong_subset <- aggregate_cong_dat(states = c("Kentucky","Michigan","Pennsylvania")
+                                    ,related_to = "tax"
+                                    ,sessions = c(50,51)
+                                    )
 
 ```
 
 ## Pulling Citations
 
-`get_var_info`: Each variable in Congress Data was collected from external sources, please use `get_var_info` to obtain their citations. We've made it easy to cite the source of each variable you use with the `get_var_info` function described above. Supply a vector of variable names to the function with the `var_names` function and collect the citations provided in the plain text or BibTeX columns. NOTE: Some variables have multiple citations, so do check you have them all.
+`get_var_info`: Each variable in Congress Data was collected from external sources, please use `get_var_info` to obtain their citations (plain text and BibTeX). We've made it easy to cite the source of each variable you use with the `get_var_info` function described above. Supply a vector of variable names to the function with the `var_names` function and collect the citations provided in the plain text or BibTeX columns. NOTE: Some variables have multiple citations, so do check you have them all.
 
 ```{r}
 
+# bibtex is also available
 get_var_info(var_names = "com_benghazi_299") %>%
-  pull(plaintext_cite,bibtex_cite)
+  pull(plaintext_cite)
 
 ```
 
 # Citation
 
-In addition to citing each variable's source, we ask that you cite Congress Data if use it or this package. A recommended citation is below.
+In addition to citing each variable's source, we ask that you cite Congress Data if use this package or the dataset. A recommended citation is below.
 
 > Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022). The Congress Data. East Lansing, MI: Institute for Public Policy and Social Research (IPPSR)
 

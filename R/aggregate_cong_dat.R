@@ -3,7 +3,7 @@
 #' \code{aggregate_cong_dat} loads either a full or subsetted version of the full
 #' Congress Data dataset into the R environment as a dataframe.
 #'
-#'@name aggregate_cong_dat
+#' @name aggregate_cong_dat
 #'
 #' @param states Default is NULL. If left blank, returns all states. Takes a
 #'   string or vector of strings of state names.
@@ -33,14 +33,14 @@
 #'
 
 
-get_aggregate_cong_data <- function(states     = NULL,
-                                    related_to = NULL,
-                                    sessions   = NULL,
-                                    census_nonperc_vars = "Mean",
-                                    census_perc_vars = "Mean",
-                                    bill_vars = "Mean",
-                                    com_vars = "Mean",
-                                    else_vars = "Mean"){
+aggregate_cong_dat <- function(states     = NULL,
+                               related_to = NULL,
+                               sessions   = NULL,
+                               census_nonperc_vars = "Mean",
+                               census_perc_vars = "Mean",
+                               bill_vars = "Mean",
+                               com_vars = "Mean",
+                               else_vars = "Mean"){
 
   check_agg_input <- function(vec){
     if(!vec %in% c("Mean","Sum","First")){
