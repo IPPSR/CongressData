@@ -13,17 +13,17 @@ related to demographics, politics, and policy; subset the data across
 multiple dimensions; create custom aggregations of the dataset; and
 access citations in both plain text and BibTeX for every variable. An
 associated web application is available
-[here](https://congress.ippsr.msu.edu/congress/) and the data-only
-package is [here](https://github.com/IPPSR/congressData).
+[here](https://cspp.ippsr.msu.edu/congress/) and the data-only package
+is [here](https://github.com/IPPSR/congressData).
 
 ## Read the Codebook and Manual
 
 The CongressData codebook is available
-<a href="https://raw.githubusercontent.com/IPPSR/congressData/main/congress_codebook_1.pdf" target="_blank">here</a>.
+<a href="https://raw.githubusercontent.com/IPPSR/congressData/main/congress_codebook_1_1.pdf" target="_blank">here</a>.
 
 The package’s manual contains information regarding each function and
 its arguments. It is available here:
-<a href="https://raw.githubusercontent.com/IPPSR/congress/main/congress_1.0_manual.pdf" target="_blank">congress
+<a href="https://raw.githubusercontent.com/IPPSR/congress/main/congress_1.1_manual.pdf" target="_blank">congress
 manual</a>.
 
 ## Installing this Package and the Data-only Companion Package
@@ -34,6 +34,7 @@ use the data-only package if you simply want to access the data. Install
 them from GitHub like so:
 
 ``` r
+
 # use the devtools library to download the package from GitHub
 library(devtools)
 
@@ -56,6 +57,7 @@ like ‘tax’ with the `related_to` argument and/or partial-match variable
 names with `var_names`.
 
 ``` r
+
 suppressMessages(library(dplyr))
 library(congress)
 #> Please cite:
@@ -108,6 +110,7 @@ searching ‘tax’ will return variables with words like ‘taxes’ and
 ‘taxable’ in any of those columns.
 
 ``` r
+
 # return the entire dataset
 all_the_dat <- get_cong_data()
 
@@ -139,6 +142,7 @@ reflect the chosen aggregation scheme (e.g. `character_var_sum`), they
 are aggregated by pasting their unique values together.
 
 ``` r
+
 # import the data using the default mean values
 agg_cong <- aggregate_cong_dat()
 
@@ -168,6 +172,7 @@ columns. NOTE: Some variables have multiple citations, so do check you
 have them all.
 
 ``` r
+
 # bibtex is also available
 get_var_info(var_names = "com_benghazi_299") %>%
   pull(plaintext_cite)
