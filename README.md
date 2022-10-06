@@ -184,9 +184,11 @@ get_var_info(var_names = "percent_bus") %>%
 #> [1] "U.S. Census Bureau. (2022). 2009-2019 American Community Survey 1-year Estimates. Retrieved from the Census Bureau Data API."
 ```
 
-## Pulling Citations
+## Contact
 
 For questions about congressData please reach out to Benjamin Yoel (yoelbenj@msu.edu).
+
+
 
 ## Citation
 
