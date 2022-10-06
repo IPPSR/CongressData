@@ -139,6 +139,10 @@ get_var_info(var_names = "percent_bus") %>%
 
 ```
 
+## Contact
+
+For questions about congressData please reach out to Ben Yoel (yoelbenj@msu.edu).
+
 ## Citation
 
 In addition to citing each variable's source, we ask that you cite CongressData if use this package or the dataset. A recommended citation is below.
