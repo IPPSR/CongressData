@@ -194,8 +194,12 @@ For questions about congressData please reach out to Benjamin Yoel (yoelbenj@msu
 
 In addition to citing each variable’s source, we ask that you cite
 CongressData if use this package or the dataset. A recommended citation
-is below.
+is below for congressData or for the specific version of the datase.
 
 > Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022).
 > CongressData. East Lansing, MI: Institute for Public Policy and Social
+> Research (IPPSR)
+>
+> Rapanos, A., & Yoel, B. (2024).
+> CongressData v1.4. East Lansing, MI: Institute for Public Policy and Social
 > Research (IPPSR)
