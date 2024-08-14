@@ -37,8 +37,12 @@
 
 get_var_info <- function(var_names = NULL, related_to = NULL){
 
-  codebook <- congressData::codebook
-
+  # get codebook
+  cb_temp <- tempfile()
+  cb_url  <- "https://ippsr.msu.edu/congresscodebook"
+  curl::curl_download(cb_url, cb_temp, mode="wb")
+  data <- fst::read_fst(cb_temp)
+  
   if(!is.null(var_names) & !is.character(var_names)){
     stop("var_names must be a string or character vector.")
   }
@@ -46,25 +50,33 @@ get_var_info <- function(var_names = NULL, related_to = NULL){
   if(!is.null(related_to) & !is.character(related_to)){
     stop("related_to must be a string or character vector.")
   }
+  
+  if(length(var_names) > 0){
+    vars <- paste0(var_names,  collapse = "|")
+    data <- data %>%
+      dplyr::filter(stringr::str_detect(.data$variable,
+                                        vars)
+                    )
+  }
 
-  vars <- paste0(var_names,  collapse = "|")
-  rels <- paste0(related_to, collapse = "|")
-
-  data <- codebook %>%
-    dplyr::filter(stringr::str_detect(.data$variable,
-                                      vars)) %>%
-    dplyr::filter_at(.vars = vars(.data$variable,
-                                  .data$short_desc,
-                                  .data$long_desc,
-                                  .data$sources),
-                     .vars_predicate = dplyr::any_vars(stringr::str_detect(tolower(.),
-                                                                           tolower(rels))))
+  if(length(related_to) > 0){
+    rels <- paste0(related_to, collapse = "|")
+    data <- data %>%
+      dplyr::filter_at(.vars = vars(.data$variable,
+                                    .data$short_desc,
+                                    .data$long_desc,
+                                    .data$sources),
+                       .vars_predicate = dplyr::any_vars(stringr::str_detect(tolower(.),
+                                                                             tolower(rels)
+                                                                             )
+                       )
+      )
+  }
 
   if(nrow(data) == 0){
     stop("Your request returned no results.")
   }
-  if(nrow(data) > 0){
-    return(data)
-  }
+
+  return(data)
 }
 

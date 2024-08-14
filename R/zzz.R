@@ -4,6 +4,5 @@
   packageStartupMessage("Please cite:\n")
   packageStartupMessage("Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022). CongressData.")
   packageStartupMessage("East Lansing, MI: Institute for Public Policy and Social Research (IPPSR).")
-  packageStartupMessage("\nYou are using the version of the Congress Data stored in your local copy of congressData. Running `congressData::get_congress_version()` will print your local version number.\n")
+  packageStartupMessage("\nRun `CongressData::get_congress_version()` to print the version of CongressData the package is using.\n")
 }
-

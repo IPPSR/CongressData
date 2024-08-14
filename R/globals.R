@@ -1,6 +1,3 @@
-
-# make CRAN happy
-utils::globalVariables(c("codebook","st","state","year","year","congress","state_icpsr"
-                         ,".","state.abb","variable","pull","vars","congress_number"),
-                       package = "congress",
+utils::globalVariables(c("state","year","congress",".","variable","pull","vars","congress_number"),
+                       package = "CongressData",
                        add = F)

@@ -27,9 +27,18 @@ get_cong_data <- function(states = NULL,
                           related_to = "",
                           years = NULL){
 
-  congress <- congressData::congress
-  codebook <- congressData::codebook
-
+  # get codebook
+  cb_temp <- tempfile()
+  cb_url  <- "https://ippsr.msu.edu/congresscodebook"
+  curl::curl_download(cb_url, cb_temp, mode="wb")
+  codebook <- fst::read_fst(cb_temp)
+  
+  # get congress
+  cg_temp <- tempfile()
+  cg_url  <- "https://ippsr.msu.edu/congressdata"
+  curl::curl_download(cg_url, cg_temp, mode="wb")
+  congress <- fst::read_fst(cg_temp)
+  
   panel_vars <- c("state","st","firstname","lastname","bioguide","year","start","end",
                   "district_number","congress_number",
                   "bioguide","govtrack","wikipedia","wikidata",
