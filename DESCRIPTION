@@ -1,13 +1,12 @@
 Package: CongressData
 Type: Package
 Title: CongressData: A Functional Tool for CongressData
-Version: 1.5
+Version: 1.5.0
 Authors@R: c(
     person("Caleb", "Lucas", email = "calebjlucas@gmail.com", role = c("aut", "cre")),
-    person("Ashtaan", "Rapanos", role = "ctb"),
     person("Ben", "Yoel", role = "ctb")
   )
-Description: A tool that imports, subsets, and exports the CongressData dataset. CongressData contains approximately 800 variables concerning all US congressional districts and covers 1789-2023. The dataset tracks district characteristics, members of Congress, and the behavior of those members in policymaking. Users with only a basic understanding of R can subset this data across multiple dimensions, export their search results, create custom aggregations (member-session) of the dataset, identify the citations associated with their searches, and more.
+Description: A tool that imports, subsets, and exports the CongressData dataset. CongressData contains approximately 800 variables concerning all US congressional districts with data back to 1789. The dataset tracks district characteristics, members of Congress, and the political behavior of those members. Users with only a basic understanding of R can subset this data across multiple dimensions, export their search results, identify the citations associated with their searches, and more.
 License: GPL-3
 Encoding: UTF-8
 Language: en-US

@@ -41,7 +41,7 @@ get_var_info <- function(var_names = NULL, related_to = NULL){
   cb_temp <- tempfile()
   cb_url  <- "https://ippsr.msu.edu/congresscodebook"
   curl::curl_download(cb_url, cb_temp, mode="wb")
-  data <- fst::read_fst(cb_temp)
+  data <- suppressMessages(fst::read_fst(cb_temp))
   
   if(!is.null(var_names) & !is.character(var_names)){
     stop("var_names must be a string or character vector.")
