@@ -119,7 +119,7 @@ available in `CongressData`.
 ``` r
 
 CongressData::get_congress_version()
-#> You are using CongressData version 1.1
+#> You are using CongressData version: 1.1
 ```
 
 ## Pulling Citations

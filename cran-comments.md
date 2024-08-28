@@ -2,7 +2,8 @@
 
 0 errors | 0 warnings | 0 notes
 
-* This is a resubmission. In version 1.5.1 I have
+* This is a resubmission. In version 1.5.2 I have
 
-- fixed the title
-- added single quotes to the dataset name
+- added \value to .Rd files regarding exported methods
+- replace the print() call with a messaging function
+

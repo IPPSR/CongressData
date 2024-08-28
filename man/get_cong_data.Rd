@@ -19,6 +19,11 @@ like 'taxes' and 'taxable' in any of those columns.}
 a single year (e.g. 2001) or a two year that represent the first and last
 that you want in the outputted dataframe (such as \code{c(1989, 20001)}).}
 }
+\value{
+An object of type tibble containing CongressData. The tibble has columns corresponding
+to variables in the dataset, and rows corresponding to observations that match
+the filtering criteria specified by the \code{states}, \code{related_to}, and \code{years} parameters.
+}
 \description{
 \code{get_cong_data} loads either a full or subsetted version of the full
 CongressData dataset into the R environment as a dataframe.

@@ -16,6 +16,20 @@ variable called 'over65' along with another called 'percent_over65'.}
 a character string, the function searches the other relevant fields (variable name, short/long
 description, and source) for string matches. Not case sensitive.}
 }
+\value{
+A tibble with information about variables in the CongressData dataset.
+The tibble contains the following columns:
+
+\itemize{
+\item \code{variable}: The name of the variable.
+\item \code{years}: The years the variable is observed.
+\item \code{short_desc}: A short description of the variable.
+\item \code{long_desc}: A long description of the variable.
+\item \code{source}: The source of the data.
+\item \code{citation}: The citation for the data, available in bibtex and plain text.
+}
+The tibble is filtered based on the provided \code{var_names} and \code{related_to} parameters.
+}
 \description{
 \code{get_var_info} retrieves information regarding variables in the CongressData dataset.
 The information available includes: the years each variable is observed in the data;

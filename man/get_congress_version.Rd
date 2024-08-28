@@ -6,6 +6,9 @@
 \usage{
 get_congress_version()
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 \code{get_congress_version} prints the current version of CongressData available through the package. It takes no arguments.
 }

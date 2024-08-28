@@ -1,7 +1,7 @@
 Package: CongressData
 Type: Package
 Title: A Functional Tool for 'CongressData'
-Version: 1.5.1
+Version: 1.5.2
 Authors@R: c(
     person("Caleb", "Lucas", email = "calebjlucas@gmail.com", role = c("aut", "cre")),
     person("Ben", "Yoel", role = "ctb")

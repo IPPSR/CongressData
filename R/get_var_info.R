@@ -21,7 +21,20 @@
 #' @importFrom rlang .data
 #' @importFrom stringr str_detect
 #' @import dplyr
-#'
+#' 
+#' @return A tibble with information about variables in the CongressData dataset.
+#' The tibble contains the following columns:
+#' 
+#' \itemize{
+#'   \item \code{variable}: The name of the variable.
+#'   \item \code{years}: The years the variable is observed.
+#'   \item \code{short_desc}: A short description of the variable.
+#'   \item \code{long_desc}: A long description of the variable.
+#'   \item \code{source}: The source of the data.
+#'   \item \code{citation}: The citation for the data, available in bibtex and plain text.
+#' }
+#' The tibble is filtered based on the provided `var_names` and `related_to` parameters.
+#' 
 #' @export
 #'
 #' @examples

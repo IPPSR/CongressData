@@ -3,7 +3,7 @@
 #' \code{get_cong_data} loads either a full or subsetted version of the full
 #' CongressData dataset into the R environment as a dataframe.
 #'
-#'@name get_cong_data
+#' @name get_cong_data
 #'
 #' @param states Default is NULL. If left blank, returns all states. Takes a
 #'   string or vector of strings of state names.
@@ -14,6 +14,10 @@
 #' @param years Default is NULL. If left blank, returns all years Input can be
 #' a single year (e.g. 2001) or a two year that represent the first and last
 #' that you want in the outputted dataframe (such as `c(1989, 20001)`).
+#' 
+#' @return An object of type tibble containing CongressData. The tibble has columns corresponding
+#' to variables in the dataset, and rows corresponding to observations that match
+#' the filtering criteria specified by the `states`, `related_to`, and `years` parameters.
 #'
 #' @importFrom dplyr "%>%" filter arrange bind_rows group_by
 #'   if_else mutate distinct rename n
