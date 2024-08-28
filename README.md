@@ -11,8 +11,7 @@ characteristics, members of congress, and the behavior of those members
 in policymaking. Users can find variables related to demographics,
 politics, and policy; subset the data across multiple dimensions; create
 custom aggregations of the dataset; and access citations in both plain
-text and BibTeX for every variable. An associated web application is
-available [here](https://cspp.ippsr.msu.edu/congress/).
+text and BibTeX for every variable.
 
 ## Installing this Package
 
