@@ -43,10 +43,9 @@ names with `var_names`.
 
 suppressMessages(library(dplyr))
 library(CongressData)
-#> Warning: package 'CongressData' was built under R version 4.4.1
 #> Please cite:
-#> Grossmann, M., Lucas, C., McCrain, J, & Ostrander, I. (2022). CongressData.
-#> East Lansing, MI: Institute for Public Policy and Social Research (IPPSR).
+#> Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. Introducing CongressData and Correlates of State Policy
+#> East Lansing, MI: Institute for Public Policy and Social Research (IPPSR), 2024.
 #> 
 #> Run `CongressData::get_congress_version()` to print the version of CongressData the package is using.
 ```

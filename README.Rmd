@@ -69,7 +69,7 @@ head(under18_cong$variable)
 
 `get_cong_data`: Access all or a part of CongressData with `get_cong_data`. Subset by state names with `state` and years with `years` (either a single year or a two-year vector that represents the min/max of what you want). You can also use the `related_to` argument to search across variable names, short/long descriptions from the codebook, and citations for non-exact matches of a supplied term. For example, searching 'tax' will return variables with words like 'taxes' and 'taxable' in any of those columns. 
 
-```{r}
+```{r eval=F}
 
 # load the entire dataset
 all_the_dat <- get_cong_data()
