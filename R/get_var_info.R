@@ -51,10 +51,32 @@
 get_var_info <- function(var_names = NULL, related_to = NULL){
 
   # get codebook
+  # cb_temp <- tempfile()
+  # cb_url  <- "https://ippsr.msu.edu/congresscodebook"
+  # curl::curl_download(cb_url, cb_temp, mode="wb")
+  # data <- suppressMessages(fst::read_fst(cb_temp))
+  
   cb_temp <- tempfile()
   cb_url  <- "https://ippsr.msu.edu/congresscodebook"
-  curl::curl_download(cb_url, cb_temp, mode="wb")
-  data <- suppressMessages(fst::read_fst(cb_temp))
+  
+  success <- tryCatch({
+    curl::curl_download(cb_url, cb_temp, mode = "wb")
+    TRUE
+  }, error = function(e) {
+    message("Codebook download failed: ", conditionMessage(e))
+    FALSE
+  })
+  
+  if (success) {
+    data <- tryCatch({
+      suppressMessages(fst::read_fst(cb_temp))
+    }, error = function(e) {
+      message("Reading codebook failed: ", conditionMessage(e))
+      NULL
+    })
+  } else {
+    data <- NULL
+  }
   
   if(!is.null(var_names) & !is.character(var_names)){
     stop("var_names must be a string or character vector.")

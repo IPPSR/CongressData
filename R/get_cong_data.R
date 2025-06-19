@@ -31,17 +31,29 @@ get_cong_data <- function(states = NULL,
                           related_to = "",
                           years = NULL){
 
-  # get codebook
+  # Get codebook
   cb_temp <- tempfile()
   cb_url  <- "https://ippsr.msu.edu/congresscodebook"
-  curl::curl_download(cb_url, cb_temp, mode="wb")
-  codebook <- suppressMessages(fst::read_fst(cb_temp))
   
-  # get congress
+  codebook <- tryCatch({
+    curl::curl_download(cb_url, cb_temp, mode = "wb")
+    suppressMessages(fst::read_fst(cb_temp))
+  }, error = function(e) {
+    message("Codebook download or read failed: ", conditionMessage(e))
+    NULL
+  })
+  
+  # Get congress
   cg_temp <- tempfile()
   cg_url  <- "https://ippsr.msu.edu/congressdata"
-  curl::curl_download(cg_url, cg_temp, mode="wb")
-  congress <- suppressMessages(fst::read_fst(cg_temp))
+  
+  congress <- tryCatch({
+    curl::curl_download(cg_url, cg_temp, mode = "wb")
+    suppressMessages(fst::read_fst(cg_temp))
+  }, error = function(e) {
+    message("Congress data download or read failed: ", conditionMessage(e))
+    NULL
+  })
   
   panel_vars <- c("state","st","firstname","lastname","bioguide","year","start","end",
                   "district_number","congress_number",
