@@ -44,8 +44,7 @@ names with `var_names`.
 suppressMessages(library(dplyr))
 library(CongressData)
 #> Please cite:
-#> Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. Introducing CongressData and Correlates of State Policy
-#> East Lansing, MI: Institute for Public Policy and Social Research (IPPSR), 2024.
+#> Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. "Introducing CongressData and Correlates of State Policy." Scientific Data 12, no. 1 (2025): 1185.
 #> 
 #> Run `CongressData::get_congress_version()` to print the version of CongressData the package is using.
 ```
@@ -153,11 +152,6 @@ get_var_info(var_names = "percent_bus") %>%
 In addition to citing each variable’s source, we ask that you cite
 CongressData if use this package or the dataset:
 
-> Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. Introducing
-> CongressData and Correlates of State Policy. East Lansing, MI:
-> Institute for Public Policy and Social Research (IPPSR), 2024.
-
-## Contact
-
-For questions about the CongressData dataset, contact Ben Yoel
-(<yoelbenj@msu.edu>).
+> Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. “Introducing
+> CongressData and Correlates of State Policy.” Scientific Data 12, no.
+> 1 (2025): 1185.

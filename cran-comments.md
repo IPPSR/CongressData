@@ -2,6 +2,6 @@
 
 0 errors | 0 warnings | 0 notes
 
-* This is a resubmission. In version 1.5.5 I have
+* This is a resubmission. In version 1.6 I have
 
-- handled potential download errors when using online resources
+- updated the data versioning, associated citation, and contact information
