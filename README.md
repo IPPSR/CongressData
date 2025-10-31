@@ -157,3 +157,8 @@ CongressData if use this package or the dataset:
 > Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. “Introducing
 > CongressData and Correlates of State Policy.” Scientific Data 12, no.
 > 1 (2025): 1185.
+
+> ## Contact
+
+For inquiries about CongressData or if you would like to have your data included in the datast, please email Benjamin Yoel (yoelbenj@msu.edu).
+
