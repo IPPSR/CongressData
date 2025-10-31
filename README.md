@@ -46,8 +46,8 @@ names with `var_names`.
 suppressMessages(library(dplyr))
 library(CongressData)
 #> Please cite:
-#> Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. "Introducing CongressData and Correlates of State Policy." Scientific Data 12, no. 1 (2025): 1185.
-#> 
+#> Grossmann, Matt, Caleb Lucas, and Benjamin Yoel. "Introducing CongressData and
+#> Correlates of State Policy." Scientific Data 12, no. 1 (2025): 1185.
 #> Run `CongressData::get_congress_version()` to print the version of CongressData the package is using.
 ```
 
