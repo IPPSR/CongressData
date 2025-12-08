@@ -4,7 +4,7 @@
 # CongressData: A Functional Tool for the CongressData Dataset<img src="figures/CongressData.png" height="150" align="right"/>
 
 `CongressData` is a package designed to allow a user with only basic
-knowledge of R interact with **CongressData**, a dataset with over 1,150
+knowledge of R interact with **CongressData**, a dataset with over 1,200
 variables that compiles information about all US congressional districts
 across 1789-2023, and its codebook. The dataset tracks district
 characteristics, members of congress, and the behavior of those members
