@@ -160,5 +160,5 @@ CongressData if use this package or the dataset:
 
 ## Contact
 
-For inquiries about CongressData or if you would like to have your data included in the dataset, please email Benjamin Yoel (yoelbenj@msu.edu).
+For inquiries about CongressData or if you would like to have your data included in the dataset, please email Benjamin Yoel (benjaminyoel@gmail.com).
 
